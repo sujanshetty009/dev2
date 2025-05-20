@@ -12,3 +12,11 @@ docker images
 docker tag img1:latest samarthh23/add-app
 docker push samarthh23/add-app
 docker pull samarthh23/add-app
+
+FROM python:3.13.2
+
+WORKDIR /app
+
+COPY . /app
+
+CMD ["python", "seltox.py"]
